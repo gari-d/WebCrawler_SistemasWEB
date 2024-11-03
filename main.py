@@ -56,7 +56,7 @@ def capturar_dados():
 
 # Configura o agendamento para atualizar dados diariamente
 scheduler = BackgroundScheduler()
-scheduler.add_job(func=capturar_dados, trigger="interval", days=1)
+scheduler.add_job(func=capturar_dados, trigger="interval", seconds=40)
 scheduler.start()
 
 # Rota para capturar dados manualmente
